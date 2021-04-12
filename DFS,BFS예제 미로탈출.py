@@ -19,10 +19,10 @@ def bfs(x,y):
                 queue.append((nx,ny))
     return graph[n-1][m-1]#가장 오른쪽아래
    
-n,m=map(int,input().split())
+n,m=map(int,input().split()) #띄어쓰기로 입력
 graph=[]
 for i in range(n):
     graph.append(list(map(int,input())))
 dx=[-1,1,0,0] #상하좌우
 dy=[0,0,-1,1]
-print(bfs(0,0))   
+print(bfs(0,0))   #0,0에서 시작시 이동칸 프린트
