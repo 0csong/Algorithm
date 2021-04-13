@@ -29,6 +29,6 @@ result=0
 for i in range(n):
     for j in range(m):
         if dfs(i,j)==True:#해당노드가 방문되엇다면
-            result+=1
+            result+=1  #결과 +1 이것은 아이스크림
 print(dfs(n,m))#마지막에는 다 방문하면 DFs는 False반환
 print(result)   
