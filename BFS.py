@@ -5,7 +5,7 @@ def bfs(graph,start,visited):
     queue=deque([start])
     visited[start]=True
     while queue: #큐가빌때까지 반복
-        v=queue.popleft()
+        v=queue.popleft()#큐에서 하나씩제거
         print(v,end=' ')
         for i in graph[v]:
             if not visited[i]:
