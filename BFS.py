@@ -7,7 +7,7 @@ def bfs(graph,start,visited):
     while queue: #큐가빌때까지 반복
         v=queue.popleft()#큐에서 하나씩제거
         print(v,end=' ')
-        for i in graph[v]:
+        for i in graph[v]: #i를 인덱스로 사용
             if not visited[i]:
                 queue.append(i)
                 visited[i]=True
