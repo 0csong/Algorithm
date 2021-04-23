@@ -1,4 +1,4 @@
-h=int(input())
+h=int(input()) #input으로 넣으면 str형식이므로 형변환
 
 count=0
 for i in range(h+1): #h시까지
