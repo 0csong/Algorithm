@@ -163,12 +163,10 @@ void crossover(int i1, int i2) {
 	/*for (int i = point; i < GENES; i++)
 		SWAP(pop[i1].genes[i], pop[i2].genes[i], tmp);	*/
 	//아래를 완성하시오.
-	for (int i = point - 1; i < GENES; i++) {
-		if (i == 0) {
-			i++;
-		}
-		SWAP(pop[i1].genes[i], pop[i2].genes[i], tmp);	
-	}
+
+	for (int i = 0; i <= point; i++)
+
+		SWAP(pop[i1].genes[i], pop[i2].genes[i], tmp);
 		
 
 }
