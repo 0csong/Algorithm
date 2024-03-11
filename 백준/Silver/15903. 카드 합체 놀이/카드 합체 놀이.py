@@ -1,10 +1,16 @@
 import sys
+import heapq
 input=sys.stdin.readline
 n,m=map(int, input().split())
-card=list(map(int, input().split()))
+card_list=list(map(int, input().split()))
+cards = []
+for card in card_list:
+    heapq.heappush(cards, card)
 
 for i in range(m):
-    card.sort()
-    card[0] = card[1] = card[0] + card[1]
+    card1 = heapq.heappop(cards)
+    card2 = heapq.heappop(cards)
+    heapq.heappush(cards, card1 + card2)
+    heapq.heappush(cards, card1 + card2)
 
-print(sum(card))
+print(sum(cards))
