@@ -1,0 +1,13 @@
+# SELECT FOOD_TYPE,REST_NAME,FAVORITES
+# FROM REST_INFO 
+# WHERE FOOD_TYPE,FAVORITES IN (
+#     SELECT FOOD_TYPE, MAX(FAVORITES) FROM REST_INFO
+#     GROUP BY FOOD_TYPE
+# )
+
+SELECT FOOD_TYPE,REST_ID,REST_NAME,FAVORITES
+FROM REST_INFO 
+WHERE (food_type, favorites) in (SELECT food_type, max(favorites)
+                                FROM REST_INFO
+                                GROUP BY FOOD_TYPE)
+ORDER BY food_type desc;
