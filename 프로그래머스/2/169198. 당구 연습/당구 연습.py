@@ -11,7 +11,7 @@ def solution(m, n, startX, startY, balls):
             if x > startX:
                 answer.append(min((startX+x)**2,(x-startX)**2+4*min(y,n-y)**2))
             else:
-                answer.append(min((2*m-startX-x)**2,(x-startX)**2+4*min(y,n-y)**2))        
+                answer.append(min((2*m-startX-x)**2,(x-startX)**2+4*min(y,n-y)**2))
         else:
             answer.append(min((x-startX)**2+min(startY+y,2*n-startY-y)**2,(y-startY)**2+min(startX+x,2*m-startX-x)**2))
     return answer
